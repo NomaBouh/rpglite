@@ -8,7 +8,7 @@ public abstract class Hero {
     public int weaponDamage;
     public List potions;
     public List lembas;
-    SpellCaster gandalf = new Mage(100, 100, 60, 30);
+
 
     public static void guerrisseur() {
         SpellCaster soraka = new Healer(100, 100, 30, 15);

@@ -7,4 +7,16 @@ public class Healer extends SpellCaster{
         this.armor = i2;
         this.weaponDamage = i3;
     }
+
+    @Override
+    public String toString() {
+        return "Healer{" +
+                "lP=" + lP +
+                ", armor=" + armor +
+                ", weaponDamage=" + weaponDamage +
+                ", potions=" + potions +
+                ", lembas=" + lembas +
+                ", mP=" + mP +
+                '}';
+    }
 }
