@@ -1,12 +1,7 @@
 package com.isep.rpg;
 
 public class Healer extends SpellCaster{
-    int lP;
-    int armor;
-    int weaponDamage;
-    public Healer(int lP, int weaponDammage, int armor){
-        this.lP = lP;
-        this.weaponDamage =weaponDammage;
-        this.armor = armor;
+    public Healer(int i, int i1, int i2, int i3){
+        super(lP, mP, armor, weaponDamage);
     }
 }
