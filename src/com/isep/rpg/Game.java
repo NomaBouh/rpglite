@@ -14,7 +14,7 @@ public class Game {
 
         //Système d'upgrade de stat après chaques combats
 
-        //Deafait
+        //Deafeat
 
         //Gestion du système d'inventaire à l'aide d'une list par personnages
 
