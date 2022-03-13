@@ -1,6 +1,6 @@
 package com.isep.rpg;
 
-public class Potion {
+public class Potion implements Consumable{
     /*public void healPotion(){
         lP += 50;
     }

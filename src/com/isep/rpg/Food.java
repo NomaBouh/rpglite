@@ -1,4 +1,4 @@
 package com.isep.rpg;
 
-public class Food {
+public class Food implements Consumable{
 }
