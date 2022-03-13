@@ -6,4 +6,14 @@ public class Warrior extends Hero{
         this.armor = protection;
         this.weaponDamage = degats;
     }
+    @Override
+    public String toString() {
+        return "Healer{" +
+                "lP=" + lP +
+                ", armor=" + armor +
+                ", weaponDamage=" + weaponDamage +
+                ", potions=" + potions +
+                ", lembas=" + lembas +
+                '}';
+    }
 }

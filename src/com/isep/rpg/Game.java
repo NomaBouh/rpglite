@@ -8,6 +8,7 @@ public class Game {
 
     public static void playGame(){
         //Initialiser le nombre de personnage jouables
+        System.out.println("Bienvenue sur RAT, POGNOS ET VICTIMUS ");
         //Définir les classes des personnage choisie si nb max non atteint
 
         //Démarer partie (définir le nombre de tour en fonction du nombre de PJ
