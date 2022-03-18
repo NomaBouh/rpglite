@@ -12,37 +12,36 @@ public class Game {
         int[] persos = new int[4];
         do{
             System.out.println("Sélectionner les Compagnons De Victimus!");
+            System.out.println("Sachez que Grâce à VICTIMUS,\nVous pourez choisir plusieurs fois le même personnage\nCar VICTIMUS peut Dupliquer\nCes compagnons sans la moindre Inquiétude!\n(... Et ne demander comment!)");
             System.out.println("1.Gandalf - Mage\n2.Soraka - Healer\n3.Geralt - Chasseur\n4.Gutz - Guérrier");
             int select = scanner.nextInt();
             persos[entier] = select;
             entier++;
-            } while (entier != nbChara);
-        System.out.println("Heureusement pour vous, Et pour VICTIMUS,\nVous pouviez choisir plusieurs fois le même personnage\nCar VICTIMUS peut faire du clonnage\nA l'aide de son MagnumMordificus!\n(... Et ne demander ce que c'est!)");
-        return persos;
+            } while ((entier != nbChara) && nbChara>4);
+            return persos;
     }
     public static void persoSelectio(int[] tableau){
         Scanner sc = new Scanner(System.in);
         int i =0;
-        for(int k = 0;k<tableau.length;k++){
-            switch (tableau[k]){
-                case 1:
+        for (int j : tableau) {
+            switch (j) {
+                case 1 -> {
                     System.out.println("VICTIMUS Constate que vous avez Sélectionner Soraka!\nVoilà un choix Intéréssant!");
                     sc.nextLine();
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     System.out.println("VICTIMUS Observe Gandalf et approuve votre choix!\nUne Bonne Chose pour VICTIMUS!");
                     sc.nextLine();
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     System.out.println("Selon VICTIMUS, Faire appel à Geralt est un choix... plus que reconcevable!\nCar VICTIMUS connait les tarifs de cette personne!");
                     sc.nextLine();
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     System.out.println("VICTIMUS Comprend votre choix!\nAinsi VICTIMUS pourra partager le champs de battaille avec un alliée à sa mesure!");
                     sc.nextLine();
-                    break;
-                default:
-                    i++;
+                }
+                default -> i++;
             }
         }
     }
@@ -53,12 +52,16 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Bienvenue sur RAT, POGNONS ET VICTIMUS");
         System.out.println("Selectionner le nombre de compagnions de VICTIMUS :");
-        int nbCompagnons = scanner.nextInt();
+        int nbCompagnons = 0;
+        do{
+            nbCompagnons = scanner.nextInt();
+            if(nbCompagnons>4) {
+                System.out.println("VICTIMUS n'as guère besoin d'une si grande companie\n (... Car VICTIMUS n'as plus un crésus!)");
+            }
+        } while (nbCompagnons>4);
         if(nbCompagnons == 4){
             System.out.println("VICTIMUS sera donc accompagné de tous ses accolytes!\n En Avant!");
-        } else if(nbCompagnons>4) {
-            System.out.println("VICTIMUS n'as guère besoin d'une si grande companie\n (... Car VICTIMUS n'as plus un crésus!)");
-        } else if(nbCompagnons == 1){
+        }  else if(nbCompagnons == 1){
             System.out.println("VICTIMUS se demande lequel de ses compagnons l'accompagneras!\n (... En espérant qu'il ne coutera pas trop chère à VICTIMUS!)");
             int[] tabula = classSelect(nbCompagnons);
             persoSelectio(tabula);
